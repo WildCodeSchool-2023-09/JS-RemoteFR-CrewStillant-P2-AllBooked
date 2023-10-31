@@ -14,7 +14,7 @@ function MenuBurger() {
         Mes favoris
       </a>
       <a className="menu-item" href="parametres">
-        Paramètre
+        Paramètres
       </a>
     </Menu>
   );
