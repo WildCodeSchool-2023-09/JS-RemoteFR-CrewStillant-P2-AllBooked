@@ -1,0 +1,25 @@
+h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.cardList {
+
+    display:flex;
+    gap:1em;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+
+
+}
+
+.masterCardList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
