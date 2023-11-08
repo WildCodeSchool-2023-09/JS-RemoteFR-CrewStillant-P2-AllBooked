@@ -7,8 +7,21 @@ import App from "./App";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/",
+        element: "",
+      },
+      {
+        path: "/bookdescription",
+        element: "",
+      },
+      {
+        path: "*",
+        element: "<h1>Page not found sorry ¯_(ツ)_/¯</h1>",
+      },
+    ],
   },
 ]);
 
