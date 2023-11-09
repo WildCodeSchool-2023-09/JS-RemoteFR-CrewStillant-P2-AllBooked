@@ -1,11 +1,12 @@
-import Carousel from "./components/Carousel";
-import NavBar from "./components/Navbar";
+import { Outlet } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import "./styles/App.css";
 
 function App() {
   return (
     <div>
-      <NavBar />;
-      <Carousel />
+      <NavBar />
+      <Outlet />
     </div>
   );
 }
