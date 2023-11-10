@@ -1,6 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import NotFound from "./pages/NotFound";
+import DetailSelection from "./pages/DetailSelection";
+import ListCardSelection from "./components/ListCardSelection";
 import App from "./App";
 import Carousel from "./components/Carousel";
 
@@ -9,16 +12,20 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
+        index: true,
+        element: <ListCardSelection />,
+      },
+      {
+        path: "/DetailSelection/:bookId",
+        element: <DetailSelection />,
+      },
+      {
         path: "/",
         element: <Carousel />,
       },
       {
-        path: "/bookdescription",
-        element: "",
-      },
-      {
         path: "*",
-        element: "<h1>Page not found sorry ¯_(ツ)_/¯</h1>",
+        element: <NotFound />,
       },
     ],
   },
