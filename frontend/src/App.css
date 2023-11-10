@@ -1,16 +1,4 @@
 body {
-  margin: 0;
-
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  button {
-    font-size: calc(10px + 2vmin);
-  }
+  margin: 0%;
+  box-sizing: border-box;
 }

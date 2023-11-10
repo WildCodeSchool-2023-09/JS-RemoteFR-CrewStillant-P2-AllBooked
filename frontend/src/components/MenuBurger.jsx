@@ -1,5 +1,10 @@
 import Menu from "react-burger-menu/lib/menus/slide";
+
+// style
+
 import "../styles/menu.css";
+
+// my function
 
 function MenuBurger() {
   return (

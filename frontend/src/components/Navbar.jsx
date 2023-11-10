@@ -1,6 +1,16 @@
-import "../styles/navbar.css";
-import MenuBurger from "./MenuBurger";
+// import logo
+
 import logo from "../assets/logo-allbooked.png";
+
+// import components
+
+import MenuBurger from "./MenuBurger";
+
+// styles
+
+import "../styles/navbar.css";
+
+// my function
 
 function NavBar() {
   return (
