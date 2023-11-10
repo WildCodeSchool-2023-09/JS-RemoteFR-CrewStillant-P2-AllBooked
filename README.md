@@ -1,34 +1,67 @@
-# All Booked
+## Concept
 
-C'est un site regroupant plusieurs outils et ressources litteraires.
+This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
+It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying a pedagogical tool.
 
+## Setup & Use
 
-## Description
+### Windows users
 
+Be sure to run these commands in a git terminal to avoid [issues with newline formats](https://en.wikipedia.org/wiki/Newline#Issues_with_different_newline_formats):
 
-C'est un site qui regroupe un large choix de references litteraires. On y retrouve diverses fonctions comme une recherche filtrée, des suggestions de lecture ainsi que la possbilité pour l'utilisateur de partager son avis et de noter les livres.
-On peut egalement s'en servir pour se creer sa propre bibliotheque numerique triant celle ci par plusieurs statuts : à lire, a lu, en cours de lecture.
-Le site met a disposition des liens dirigeant l'utilisateur vers deux sites partenaires sur lequel il pourra acquérir les livres de son choix. 
-Notre choix s'est fait sur des librairies a taille humaine dans le but d'encourager de plus petites librairies.
-Plusieurs petites fonctionnalités sont proposées afin de rendre l'experience plus agreable et immersive telles que le choix du theme, animations, et citations.
+```
+git config --global core.eol lf
+git config --global core.autocrlf false
+```
 
+### Project Initialization
 
-## Instructions
+- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
+- Clone this repo, enter it
+- If you are using `yarn` or `pnpm`, adapt the `config/cli` in `package.json`
+- Run command `npm install` (or equivalent using `yarn` or `pnpm`)
+- Create environment files (`.env`) in both `backend` and `frontend`: you can copy `.env.sample` files as starters (**don't** delete them)
 
-### Installation de votre projet
+### Before you start
 
->Pour installer votre projet, il suffit de cloner le dépôt et d'installer les dépendances.
+- To ensure compatibility and prevent conflicts, please consistently employ a **single** package manager: `npm`, `yarn`, or `pnpm`.
 
+### Available Commands
 
-## Status du projet
+- `db:migrate` : Run the database migration script
+- `db:seed` : Run the database seed script
+- `dev` : Starts both servers (frontend + backend) in one terminal
+- `dev-front` : Starts the React frontend server
+- `dev-back` : Starts the Express backend server
+- `lint` : Runs validation tools (will be executed on every _commit_, and refuse unclean code)
 
-En cours
+## FAQ
 
-## Auteurs
+### Tools
 
-[Jean-François](https://github.com/YOUNS28100) - [Lucinda](https://github.com/Mewlyscin) - [Julien](https://github.com/Jubdc) - [Alix](https://github.com/Halicksse)
+- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
+- _Husky_ : Allows to execute specific commands that trigger on _git_ events
+- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
+- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
+- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
+- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
 
+### Deployment with Traefik
 
-## License
+> ⚠️ Prerequisites : You must have installed and configured Traefik on your VPS beforehand.
+> https://github.com/WildCodeSchool/vps-traefik-starter-kit/
 
-[MIT](https://choosealicense.com/licenses/mit/)
+For deployment, you have to go to `secrets` → app `actions` on the github repo to insert via `New repository secret` :
+
+- SSH_HOST : IP address of your VPS
+- SSH_USER : SSH login to your VPS
+- SSH_PASSWORD : SSH connection password to your VPS
+
+And a public variable from the tab `/settings/variables/actions`
+
+- PROJECT_NAME : the name of the project used to create the subdomain for frontend.
+
+The backend subdomain will be automatically created with the suffix -backend.
+The global variable VITE_BACKEND_URL will be automatically created and pre-filled on the basis of this information.
+
+Use this same tab to add the other environment variables required for the project if any.
