@@ -3,9 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import NotFound from "./pages/NotFound";
 import DetailSelection from "./pages/DetailSelection";
-import ListCardSelection from "./components/ListCardSelection";
 import App from "./App";
-import Carousel from "./components/Carousel";
+import Home from "./components/Home";
 
 const router = createBrowserRouter([
   {
@@ -13,16 +12,13 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <ListCardSelection />,
+        element: <Home />,
       },
       {
         path: "/DetailSelection/:bookId",
         element: <DetailSelection />,
       },
-      {
-        path: "/",
-        element: <Carousel />,
-      },
+
       {
         path: "*",
         element: <NotFound />,

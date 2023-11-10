@@ -1,7 +1,6 @@
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
+@font-face {
+  font-family: "EagleLake-Regular";
+  src: url("../fonts/EagleLake-Regular.ttf");
 }
 
 .footer {
@@ -11,8 +10,10 @@ body {
   background: repeating-linear-gradient(to bottom, #1b1b1b 0%, #000000 100%);
   width: 100%;
   font-family: sans-serif;
-  position: absolute;
+  position: relative;
   bottom: 0;
+  font-family: "EagleLake-Regular";
+  font-size: smaller;
 }
 
 .Newsletter {
@@ -29,7 +30,8 @@ body {
   width: 150px;
   height: 15px;
   flex-shrink: 0;
-}.form {
+}
+.form {
   display: flex;
 }
 
@@ -49,9 +51,8 @@ body {
   height: 25px;
 }
 
-.btn:hover
- {
-  transition: 2s ;
+.btn:hover {
+  transition: 2s;
   transform: scale(1.2);
 }
 
@@ -76,7 +77,7 @@ body {
   color: #fdd7a6;
   text-align: center;
 }
-.network-text{
+.network-text {
   margin-bottom: -10px;
 }
 
@@ -87,9 +88,8 @@ body {
 }
 .youtube:hover,
 .insta:hover,
-.twitch:hover
- {
-  transition: 2s ;
+.twitch:hover {
+  transition: 2s;
   transform: scale(1.2);
 }
 
