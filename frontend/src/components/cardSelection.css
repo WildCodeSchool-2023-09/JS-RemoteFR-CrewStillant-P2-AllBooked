@@ -1,21 +1,14 @@
-.Card {
-
-
-display: flex;
-flex-direction: column;
-width: 8em;
-height: 10em;
-border: solid 0px black;
-border-radius: 1.2em;
-
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 8em;
+  height: 10em;
+  border: solid 0px black;
+  border-radius: 1.2em;
 }
 
-
-
 .cardHeader img {
-
-    width: 8em;
-    height:10em;
-    border-radius: 1em;
-
+  width: 8em;
+  height: 10em;
+  border-radius: 1em;
 }
