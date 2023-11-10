@@ -13,6 +13,7 @@ function Footer() {
         <form className="form" action="">
           <input type="text" className="input" />
           <button className="btn" type="button">
+            <span className="btn-text">send</span>
             <img src={enveloppe} alt="" className="subscribe" />
           </button>
         </form>

@@ -23,6 +23,10 @@
   color: #fdd7a6;
 }
 
+.btn-text{
+display: none;
+}
+
 .input {
   padding: 5px;
   border-radius: 10px;
