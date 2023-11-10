@@ -1,14 +1,29 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import ReactDOM from "react-dom/client";
+import NotFound from "./pages/NotFound";
+import DetailSelection from "./pages/DetailSelection";
 import App from "./App";
+import Home from "./components/Home";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <App />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/DetailSelection/:bookId",
+        element: <DetailSelection />,
+      },
+
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+    ],
   },
 ]);
 
