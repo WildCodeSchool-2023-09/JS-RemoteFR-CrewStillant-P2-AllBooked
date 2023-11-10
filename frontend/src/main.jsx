@@ -23,10 +23,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Carousel />,
       },
-        {   
-          path: "*",
+      {
+        path: "*",
         element: <NotFound />,
-        },
+      },
     ],
   },
 ]);
