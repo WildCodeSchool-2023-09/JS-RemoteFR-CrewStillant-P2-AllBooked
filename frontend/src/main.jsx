@@ -22,7 +22,6 @@ const router = createBrowserRouter([
         path: "/DetailSelection/:bookId",
         element: <DetailSelection />,
       },
-
       {
         path: "*",
         element: <NotFound />,
