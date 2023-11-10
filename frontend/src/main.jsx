@@ -1,17 +1,14 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
-
 import NotFound from "./pages/NotFound";
 import DetailSelection from "./pages/DetailSelection";
-
 import ListCardSelection from "./components/ListCardSelection";
-
 import App from "./App";
+import Carousel from "./components/Carousel";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <App />,
     children: [
       {
@@ -22,11 +19,14 @@ const router = createBrowserRouter([
         path: "/DetailSelection/:bookId",
         element: <DetailSelection />,
       },
-
       {
-        path: "*",
-        element: <NotFound />,
+        path: "/",
+        element: <Carousel />,
       },
+        {   
+          path: "*",
+        element: <NotFound />,
+        },
     ],
   },
 ]);

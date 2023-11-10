@@ -2,7 +2,7 @@ import "../styles/navbar.css";
 import MenuBurger from "./MenuBurger";
 import logo from "../assets/logo-allbooked.png";
 
-function NavBar() {
+function Navbar() {
   return (
     <div>
       <nav className="navb">
@@ -14,4 +14,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Navbar;

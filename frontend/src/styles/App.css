@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "EagleLake-Regular";
+  src: url("../fonts/EagleLake-Regular.ttf");
+}
+
+body {
+  font-family: "EagleLake-Regular";
+  box-sizing: border-box;
+  margin: 0;
+}
