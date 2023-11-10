@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "FleurDeLeah";
+  src: url("../fonts/FleurDeLeah-Regular.ttf");
+}
+
+.navb {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  background-color: #000000;
+  background-size: cover;
+}
+
+#Name_site {
+  color: #fdd7a6;
+  font-family: "FleurDeLeah";
+  font-size: 50px;
+}
+
+#Pictures {
+  margin-left: 1em;
+  height: 6em;
+  width: 6em;
+}
