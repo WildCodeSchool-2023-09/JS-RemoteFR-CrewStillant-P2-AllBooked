@@ -1,9 +1,13 @@
 import React from "react";
-
-import ListCardSelection from "./components/ListCardSelection";
+import { Outlet } from "react-router-dom";
+import NavBar from "./components/Navbar";
 
 function App() {
-  return <ListCardSelection />;
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+    </>
+  );
 }
-
 export default App;
