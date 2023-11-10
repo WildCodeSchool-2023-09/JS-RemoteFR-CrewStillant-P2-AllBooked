@@ -1,13 +1,13 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
-import NavBar from "./components/Navbar";
+import "./styles/App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <>
-      <NavBar />
+    <div>
+      <Navbar />
       <Outlet />
-    </>
+    </div>
   );
 }
 export default App;
