@@ -4,29 +4,37 @@ import ReactDOM from "react-dom/client";
 import NotFound from "./pages/NotFound";
 import DetailSelection from "./pages/DetailSelection";
 import App from "./App";
-import Recherche from "./pages/Recherche";
 import Home from "./components/Home";
+import SearchResults from "./pages/SearchResults";
+
+const ApiUrl = import.meta.env.VITE_API_URL;
+const ApiKey = import.meta.env.VITE_API_KEY;
+const ApiUrl2 = import.meta.env.VITE_API_URL2;
 
 const router = createBrowserRouter([
   {
+    path: "/",
     element: <App />,
     children: [
       {
         index: true,
         element: <Home />,
+        loader: () => fetch(`${ApiUrl}${ApiKey}&q=potter&maxResults=6`),
       },
       {
-        path: "recherche/:search",
-        element: <Recherche />,
-        loader: ({ params }) => {
-          fetch(
-            `https://www.googleapis.com/books/v1/volumes?q=${params.search}&printType=books&key=AIzaSyCRqS28SI90ab1CXYQ0DUmXdL_P_vRGVEM&maxResults=40`
-          );
-        },
+        path: "searchresults/:results",
+        element: <SearchResults />,
+        loader: ({ params }) => fetch(`${ApiUrl}${ApiKey}&q=${params.results}`),
       },
       {
-        path: "/DetailSelection/:bookId",
+        path: "detailselection/:id",
         element: <DetailSelection />,
+        loader: ({ params }) =>
+          fetch(`${ApiUrl2}${params.id}`, {
+            headers: {
+              Authorization: `${ApiKey}`,
+            },
+          }),
       },
       {
         path: "*",
