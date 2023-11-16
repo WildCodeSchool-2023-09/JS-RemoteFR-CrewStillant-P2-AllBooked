@@ -1,6 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-sea-green.min.css";
-import "../styles/carousel.css";
+import "../styles/thecarousel.css";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import img from "../assets/notfound.png";
