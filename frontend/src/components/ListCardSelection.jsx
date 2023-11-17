@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import CardSelection from "./CardSelection";
-import "./cardSelection.css";
-import "./cardList.css";
+import "../styles/cardselection.css";
+import "../styles/cardlist.css";
 
 function ListCardSelection() {
   const [google, setGoogle] = useState(null);

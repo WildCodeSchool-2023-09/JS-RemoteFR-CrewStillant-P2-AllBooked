@@ -1,0 +1,45 @@
+.results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.card {
+  width: 20em;
+  height: 24em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 5px;
+  margin: 1.5em;
+  padding: 2.5em;
+  border: 2px;
+}
+
+h3 {
+  font-size: medium;
+  margin-top: 1.5em;
+  text-align: center;
+  color: #fdd7a6;
+}
+.link {
+  text-decoration: none;
+}
+
+.img_src {
+  width: 10em;
+  height: 15em;
+  align-items: center;
+}
+.img_src:hover {
+  transition: transform 1.7s;
+  transform: scale(1.3);
+}
