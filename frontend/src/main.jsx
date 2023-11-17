@@ -8,16 +8,13 @@ import App from "./App";
 import Home from "./components/Home";
 import SearchResults from "./pages/SearchResults";
 
-const ApiUrl = import.meta.env.VITE_API_URL;
-const ApiKey = import.meta.env.VITE_API_KEY;
-const ApiUrl2 = import.meta.env.VITE_API_URL2;
-
 // Pages
 
 import MyBooks from "./pages/MyBooks";
 import NotFound from "./pages/NotFound";
 import DetailSelection from "./pages/DetailSelection";
 
+const ApiUrl = import.meta.env.VITE_API_URL;
 const ApiKey = import.meta.env.VITE_API_KEY;
 const ApiUrl2 = import.meta.env.VITE_API_URL2;
 

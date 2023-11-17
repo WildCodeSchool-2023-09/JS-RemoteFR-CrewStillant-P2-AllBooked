@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "../styles/footer.css";
 import youtubeImage from "../assets/youtube.png";
 import twitchImage from "../assets/twitch.png";

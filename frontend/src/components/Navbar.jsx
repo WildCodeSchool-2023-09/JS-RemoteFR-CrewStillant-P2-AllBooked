@@ -1,6 +1,4 @@
 import { NavLink } from "react-router-dom";
-import "../styles/navbar.css";
-import MenuBurger from "./MenuBurger";
 
 // logo
 
