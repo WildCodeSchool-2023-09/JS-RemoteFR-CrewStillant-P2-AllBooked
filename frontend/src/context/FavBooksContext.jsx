@@ -7,10 +7,7 @@ export function BooksProvider({ children }) {
   const [favBooks, setFavBooks] = useState([]);
 
   const basketValues = useMemo(
-    {
-      favBooks,
-      setFavBooks,
-    },
+    () => ({ favBooks, setFavBooks }),
     [favBooks, setFavBooks]
   );
 
