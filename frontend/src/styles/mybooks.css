@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "EagleLake";
+  src: url("../fonts/EagleLake-Regular.ttf");
+}
+
+:root {
+  background-color: #1b1b1b;
+  font-family: "EagleLake";
+}
+
+h1 {
+  text-align: center;
+  color: #fdd7a6;
+  margin: 0%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

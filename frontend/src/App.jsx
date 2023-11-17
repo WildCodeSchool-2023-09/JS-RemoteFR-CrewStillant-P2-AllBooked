@@ -1,15 +1,22 @@
 import { Outlet } from "react-router-dom";
+
+// import components
+
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
+
+// styles
+
 import "./styles/App.css";
+import { BooksProvider } from "./context/FavBooksContext";
 
 function App() {
   return (
-    <div>
+    <BooksProvider>
       <NavBar />
       <Outlet />
       <Footer />
-    </div>
+    </BooksProvider>
   );
 }
 export default App;

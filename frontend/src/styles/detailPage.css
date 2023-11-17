@@ -59,3 +59,19 @@ p {
 .M {
   transform: translateY(-5px);
 }
+
+.heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1em;
+  width: 1em;
+  transform: translateY(-190px);
+  margin-left: 8.2em;
+  background-color: transparent;
+  border: transparent;
+}
+
+.heart :hover {
+  background-color: red;
+}

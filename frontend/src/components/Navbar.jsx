@@ -1,7 +1,18 @@
 import { NavLink } from "react-router-dom";
-import "../styles/navbar.css";
-import MenuBurger from "./MenuBurger";
+
+// logo
+
 import logo from "../assets/logo-allbooked.png";
+
+// import components
+
+import MenuBurger from "./MenuBurger";
+
+// styles
+
+import "../styles/navbar.css";
+
+// my function
 
 function Navbar() {
   return (

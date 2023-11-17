@@ -1,11 +1,18 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
-import NotFound from "./pages/NotFound";
-import DetailSelection from "./pages/DetailSelection";
+
+// Components
+
 import App from "./App";
 import Home from "./components/Home";
 import SearchResults from "./pages/SearchResults";
+
+// Pages
+
+import MyBooks from "./pages/MyBooks";
+import NotFound from "./pages/NotFound";
+import DetailSelection from "./pages/DetailSelection";
 
 const ApiUrl = import.meta.env.VITE_API_URL;
 const ApiKey = import.meta.env.VITE_API_KEY;
@@ -35,6 +42,14 @@ const router = createBrowserRouter([
               Authorization: `${ApiKey}`,
             },
           }),
+      },
+      {
+        path: "/mybooks",
+        element: <MyBooks />,
+        loader: () =>
+          fetch(
+            "https://www.googleapis.com/books/v1/volumes?q=harry+inauthor:rowling&maxResults=40&printType=books&key=AIzaSyCRqS28SI90ab1CXYQ0DUmXdL_P_vRGVEM"
+          ),
       },
       {
         path: "*",

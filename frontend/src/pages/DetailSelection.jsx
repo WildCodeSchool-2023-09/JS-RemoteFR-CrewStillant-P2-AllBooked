@@ -1,9 +1,27 @@
 import { Link, useLoaderData } from "react-router-dom";
+
+import { useCurrentBooks } from "../context/FavBooksContext";
+
 import "../styles/detailPage.css";
+import heart from "../assets/icons8-aimer-16.png";
+
 import NotationStars from "../components/NotationStars";
 
 function DetailSelection() {
   const data = useLoaderData();
+
+  const { favBooks, setFavBooks } = useCurrentBooks();
+  const heartClick = () => {
+    const currentBook = favBooks.find((f) => f?.id === data.id);
+
+    if (!currentBook) {
+      console.info("add");
+      setFavBooks([...favBooks, data]);
+    } else {
+      console.info("delete");
+      favBooks.splice(favBooks.indexOf(data), 1);
+    }
+  };
 
   if (!data) {
     return <div>Chargement...</div>;
@@ -15,6 +33,9 @@ function DetailSelection() {
         src={data.volumeInfo.imageLinks.thumbnail}
         alt={data.volumeInfo.title}
       />
+      <button className="heart" type="button" onClick={() => heartClick()}>
+        <img src={heart} alt="heart" />
+      </button>
       <div className="NotationStars">
         <NotationStars />
       </div>

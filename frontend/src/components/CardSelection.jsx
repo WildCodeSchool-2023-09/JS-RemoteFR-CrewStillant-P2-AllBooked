@@ -1,5 +1,7 @@
 import React from "react";
-import "../styles/cardselection.css";
+
+import "../styles/cardSelection.css";
+
 import PropTypes from "prop-types";
 
 function CardSelection({ image }) {
