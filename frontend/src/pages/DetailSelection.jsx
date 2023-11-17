@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "../components/detailPage.css";
+import "../styles/detailPage.css";
 import NotationStars from "../components/NotationStars";
 
 function DetailSelection() {

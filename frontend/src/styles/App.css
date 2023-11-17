@@ -5,8 +5,8 @@
 
 body {
   font-family: "EagleLake-Regular";
-  box-sizing: border-box;
-  margin: 0;
-  padding:0;
-  background-color: #1b1b1b ;
+  background-color: #1b1b1b;
+}
+navLink{
+  text-decoration: none;
 }

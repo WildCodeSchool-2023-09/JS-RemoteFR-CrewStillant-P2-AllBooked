@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./starsNotation.css";
+import "../styles/starsNotation.css";
 
 const MAX_RATING = 5;
 
