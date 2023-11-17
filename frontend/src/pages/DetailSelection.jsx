@@ -1,8 +1,10 @@
 import { Link, useLoaderData } from "react-router-dom";
+
 import { useCurrentBooks } from "../context/FavBooksContext";
 
 import "../styles/detailPage.css";
 import heart from "../assets/icons8-aimer-16.png";
+
 import NotationStars from "../components/NotationStars";
 
 function DetailSelection() {
@@ -24,7 +26,6 @@ function DetailSelection() {
   if (!data) {
     return <div>Chargement...</div>;
   }
-
   return (
     <div className="DetailPage">
       <h1>{data.volumeInfo.title}</h1>
@@ -40,19 +41,19 @@ function DetailSelection() {
       </div>
 
       <p>
-        <strong>Description :</strong> {data.volumeInfo.description}
+        <strong>Description : </strong> {data.volumeInfo.description}
       </p>
       <p>
-        <strong>Auteur(s) :</strong> {data.volumeInfo.authors?.join(", ")}
+        <strong>Auteur(s) : </strong> {data.volumeInfo.authors?.join(", ")}
       </p>
       <p>
-        <strong>Genre(s) :</strong> {data.volumeInfo.categories?.join(", ")}
+        <strong>Genre(s) : </strong> {data.volumeInfo.categories?.join(", ")}
       </p>
       <p>
-        <strong>Éditeur :</strong> {data.volumeInfo.publisher}
+        <strong>Éditeur : </strong> {data.volumeInfo.publisher}
       </p>
       <p>
-        <strong>Date de publication :</strong> {data.volumeInfo.publishedDate}
+        <strong>Date de publication : </strong> {data.volumeInfo.publishedDate}
       </p>
       <p>
         <strong>ISBN : </strong>

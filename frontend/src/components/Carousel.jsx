@@ -1,8 +1,15 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-sea-green.min.css";
-import "../styles/Carousel.css";
+import "../styles/thecarousel.css";
+import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
+import img from "../assets/notfound.png";
 
-function Carousel() {
+function Carousel({ data }) {
+  const navigate = useNavigate();
+
+  console.info(data);
+
   return (
     <section className="totalCarousel">
       <div className="title">
@@ -14,13 +21,14 @@ function Carousel() {
           rewind: true,
           fixedHeight: "200px",
           width: "45%",
-          fixedWidth: "128px",
-          trimSpace: false,
+          fixedWidth: "150px",
+          trimSpace: "move",
           drag: "free",
           keyboard: "true",
           focus: "center",
           slideFocus: true,
-          gap: "4rem",
+          gap: "10px",
+          focusableNodes: "a",
           breakpoints: {
             580: {
               perPage: 2,
@@ -31,27 +39,30 @@ function Carousel() {
         }}
         aria-label="Nos Coups de coeur"
       >
-        <SplideSlide>
-          <img src="https://picsum.photos/128/158" alt="picsum" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://picsum.photos/128/158" alt="picsum2" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://picsum.photos/128/158" alt="picsum" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://picsum.photos/128/158" alt="picsum" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://picsum.photos/128/158" alt="picsum" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://picsum.photos/128/158" alt="picsum" />
-        </SplideSlide>
+        {data.map((b) => (
+          <SplideSlide key={b.id}>
+            <button
+              type="button"
+              onClick={() => navigate(`detailselection/${b.id}`)}
+            >
+              <img
+                src={
+                  b.volumeInfo?.imageLinks?.thumbnail
+                    ? b.volumeInfo?.imageLinks?.thumbnail
+                    : img
+                }
+                alt={b.volumeInfo.title}
+              />
+            </button>
+          </SplideSlide>
+        ))}
       </Splide>
     </section>
   );
 }
+
+Carousel.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape).isRequired,
+};
 
 export default Carousel;

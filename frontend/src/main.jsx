@@ -6,6 +6,11 @@ import ReactDOM from "react-dom/client";
 
 import App from "./App";
 import Home from "./components/Home";
+import SearchResults from "./pages/SearchResults";
+
+const ApiUrl = import.meta.env.VITE_API_URL;
+const ApiKey = import.meta.env.VITE_API_KEY;
+const ApiUrl2 = import.meta.env.VITE_API_URL2;
 
 // Pages
 
@@ -18,11 +23,18 @@ const ApiUrl2 = import.meta.env.VITE_API_URL2;
 
 const router = createBrowserRouter([
   {
+    path: "/",
     element: <App />,
     children: [
       {
         index: true,
         element: <Home />,
+        loader: () => fetch(`${ApiUrl}${ApiKey}&q=potter&maxResults=6`),
+      },
+      {
+        path: "searchresults/:results",
+        element: <SearchResults />,
+        loader: ({ params }) => fetch(`${ApiUrl}${ApiKey}&q=${params.results}`),
       },
       {
         path: "detailselection/:id",
