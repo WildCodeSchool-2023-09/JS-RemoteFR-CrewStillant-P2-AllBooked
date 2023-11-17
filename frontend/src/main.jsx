@@ -17,6 +17,7 @@ import Delivery from "./pages/Footer/Delivery";
 
 const ApiUrl = import.meta.env.VITE_API_URL;
 const ApiKey = import.meta.env.VITE_API_KEY;
+const ApiUrl2 = import.meta.env.VITE_API_URL2;
 
 const router = createBrowserRouter([
   {
@@ -33,10 +34,15 @@ const router = createBrowserRouter([
         element: <SearchResults />,
         loader: ({ params }) => fetch(`${ApiUrl}${ApiKey}&q=${params.results}`),
       },
-
       {
-        path: "/DetailSelection/:bookId",
+        path: "detailselection/:id",
         element: <DetailSelection />,
+        loader: ({ params }) =>
+          fetch(`${ApiUrl2}${params.id}`, {
+            headers: {
+              Authorization: `${ApiKey}`,
+            },
+          }),
       },
       {
         path: "/privacy",
