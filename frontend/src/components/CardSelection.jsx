@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../styles/cardSelection.css";
+import "../styles/cardselection.css";
 
 import PropTypes from "prop-types";
 

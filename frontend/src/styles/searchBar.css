@@ -1,0 +1,24 @@
+.search-bar-container {
+  padding-top: 3em;
+  width: 40%;
+  margin: auto;
+  border: none;
+}
+.form-all {
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.input {
+  display: flex;
+  all: unset;
+  font: 16px system-ui;
+  color: #000000;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}

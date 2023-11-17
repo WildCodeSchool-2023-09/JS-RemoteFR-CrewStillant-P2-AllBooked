@@ -6,14 +6,14 @@
 .footer {
   display: flex;
   justify-content: space-around;
-  box-sizing: border-box;
   background: repeating-linear-gradient(to bottom, #1b1b1b 0%, #000000 100%);
   width: 100%;
   font-family: sans-serif;
-  position: relative;
+  position: fixed;
   bottom: 0;
   font-family: "EagleLake-Regular";
   font-size: smaller;
+  text-decoration: none;
   margin-top: 30px;
 }
 
@@ -28,7 +28,7 @@
   display: none;
 }
 
-.input {
+.input-footer {
   padding: 5px;
   border-radius: 10px;
   font-size: 16px;
@@ -36,7 +36,7 @@
   height: 15px;
   flex-shrink: 0;
 }
-.form {
+.form-footer {
   display: flex;
 }
 
