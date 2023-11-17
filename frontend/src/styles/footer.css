@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "EagleLake-Regular";
+  src: url("../fonts/EagleLake-Regular.ttf");
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  background: repeating-linear-gradient(to bottom, #1b1b1b 0%, #000000 100%);
+  width: 100%;
+  font-family: sans-serif;
+  position: relative;
+  bottom: 0;
+  font-family: "EagleLake-Regular";
+  font-size: smaller;
+}
+
+.Newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fdd7a6;
+}
+
+.btn-text{
+display: none;
+}
+
+.input {
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 150px;
+  height: 15px;
+  flex-shrink: 0;
+}
+.form {
+  display: flex;
+}
+
+.btn {
+  padding: 0;
+  display: block;
+  background-color: #1e1d1e;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.subscribe {
+  margin: auto 0;
+  width: 25px;
+  height: 25px;
+}
+
+.btn:hover {
+  transition: 2s;
+  transform: scale(1.2);
+}
+
+.part1 {
+  display: flex;
+  flex-direction: column;
+  color: #fdd7a6;
+}
+
+.part2 {
+  display: flex;
+  flex-direction: column;
+  color: #fdd7a6;
+}
+.part1 p,
+.part2 p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.network {
+  color: #fdd7a6;
+  text-align: center;
+}
+.network-text {
+  margin-bottom: -10px;
+}
+
+.network-icons {
+  display: flex;
+  align-items: center;
+  color: #fdd7a6;
+}
+.youtube:hover,
+.insta:hover,
+.twitch:hover {
+  transition: 2s;
+  transform: scale(1.2);
+}
+
+.youtube,
+.insta,
+.twitch {
+  transition: 2s;
+  display: flex;
+  width: 70px;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 699px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .part1 p,
+  .part2 p {
+    margin-top: 0.6em;
+    margin-bottom: 0.1em;
+    text-align: center;
+  }
+}

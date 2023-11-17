@@ -15,8 +15,6 @@
   justify-content: center;
 }
 
-/* item list effect hover  */
-
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #fdd7a6;
@@ -33,6 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
 }
 
 /* General list styles */

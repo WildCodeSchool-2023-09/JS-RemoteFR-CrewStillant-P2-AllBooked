@@ -1,0 +1,9 @@
+.title {
+  text-align: center;
+}
+
+.totalCarousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

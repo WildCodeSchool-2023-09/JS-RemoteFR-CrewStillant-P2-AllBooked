@@ -1,6 +1,6 @@
 // import components
 
-import BookFav from "../components/BookFav";
+import BookFav from "../components/bookslike/BookFav";
 
 // styles
 

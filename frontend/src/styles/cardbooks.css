@@ -24,7 +24,7 @@
   margin: 1.5em;
   padding: 2.5em;
   width: 20em;
-  height: 23em;
+  height: 24em;
 }
 
 .image1 {
@@ -47,4 +47,24 @@ h2 {
   font-size: medium;
   margin-top: 1.5em;
   text-align: center;
+}
+
+.heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1em;
+  width: 1em;
+  transform: translateY(-190px);
+  margin-left: 8.2em;
+  background-color: transparent;
+  border: transparent;
+}
+
+.heart :hover {
+  background-color: red;
+}
+
+.filterCategorie {
+  align-items: start;
 }

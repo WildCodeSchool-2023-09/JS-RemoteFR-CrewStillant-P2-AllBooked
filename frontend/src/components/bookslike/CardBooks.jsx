@@ -1,12 +1,10 @@
-import React from "react";
-
-// styles
-
-import "../styles/cardbooks.css";
-
 // PropTypes
 
 import PropTypes from "prop-types";
+
+// styles
+
+import "../../styles/cardbooks.css";
 
 // my function
 
