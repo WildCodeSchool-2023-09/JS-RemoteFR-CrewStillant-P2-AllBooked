@@ -1,21 +1,30 @@
 import Menu from "react-burger-menu/lib/menus/slide";
+
+// style
+
 import "../styles/menu.css";
+import { NavLink } from "react-router-dom";
+
+// my function
 
 function MenuBurger() {
   return (
     <Menu right>
-      <a className="menu-item" href="/compte">
+      <NavLink className="menu-item" to="/home">
+        Home
+      </NavLink>
+      <NavLink className="menu-item" to="/compte">
         Mon compte
-      </a>
-      <a className="menu-item" href="/categories">
-        Catégories
-      </a>
-      <a className="menu-item" href="favoris">
-        Mes favoris
-      </a>
-      <a className="menu-item" href="parametres">
+      </NavLink>
+      <NavLink className="menu-item" to="/citations">
+        Citations
+      </NavLink>
+      <NavLink className="menu-item" to="/mybooks">
+        My Books
+      </NavLink>
+      <NavLink className="menu-item" to="/parametres">
         Paramètres
-      </a>
+      </NavLink>
     </Menu>
   );
 }

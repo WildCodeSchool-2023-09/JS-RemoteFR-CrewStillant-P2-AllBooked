@@ -9,8 +9,8 @@ function Results({ data }) {
   return (
     <section className="results">
       {data.map((b) => (
-        <NavLink className="link" to={`/detailselection/${b.id}`}>
-          <div className="card" key={b.id}>
+        <NavLink className="link" to={`/detailselection/${b.id}`} key={b.id}>
+          <div className="card">
             <img
               className="img_src"
               src={
@@ -29,7 +29,7 @@ function Results({ data }) {
 }
 
 Results.propTypes = {
-  data: PropTypes.arrayOf([PropTypes.object]).isRequired,
+  data: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
 
 export default Results;

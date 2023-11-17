@@ -3,6 +3,8 @@ import "../styles/navbar.css";
 import MenuBurger from "./MenuBurger";
 import logo from "../assets/logo-allbooked.png";
 
+// my function
+
 function Navbar() {
   return (
     <div>
