@@ -10,7 +10,7 @@
   background: repeating-linear-gradient(to bottom, #1b1b1b 0%, #000000 100%);
   width: 100%;
   font-family: sans-serif;
-  position: absolute;
+  position: relative;
   bottom: 0;
   font-family: "EagleLake-Regular";
   font-size: smaller;
